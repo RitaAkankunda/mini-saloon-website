@@ -40,7 +40,7 @@ Welcome to Sofari Hair Studio - a premium hair salon specializing in professiona
 - WhatsApp Business API Integration
 
 ## How to Visit
-Visit us online at: [Website URL will appear after GitHub Pages deployment]
+Visit us online at https://ritaakankunda.github.io/mini-saloon-website/
 
 Or book directly via WhatsApp for instant confirmation!
 

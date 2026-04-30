@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Book Now | Sofari Hair Studio</title>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">✨ Sofari Hair Studio</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+
+        <a href="booking.html" class="nav-book-btn active">Book Now</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <div class="booking-container" style="max-width: 600px; margin: 0 auto; padding: 60px 8%;">
+            <h2 style="font-size: 36px; text-align: center; margin-bottom: 10px;">📅 Book Your Appointment</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 40px; font-size: 16px;">
+                Easy booking in 3 steps. We'll send you a confirmation on WhatsApp.
+            </p>
+            <form onsubmit="handleBooking(event)">
+                <!-- Your Info -->
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">👤 Your Name</label>
+                    <input type="text" id="name" placeholder="e.g., Jane Doe" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">📱 WhatsApp Number</label>
+                    <input type="tel" id="phone" placeholder="256708425369" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; box-sizing: border-box;">
+                    <p style="font-size: 12px; color: var(--text-light); margin-top: 5px;">We'll message you here to confirm</p>
+                </div>
+
+                <!-- Service Selection -->
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">💇 Choose Your Service</label>
+                    <select id="service" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; box-sizing: border-box; background: var(--white); cursor: pointer;">
+                        <option value="">-- Select a service --</option>
+                        <option value="Knotless Braids">Knotless Braids - 80,000 UGX</option>
+                        <option value="Sew-in Weaves">Sew-in Weaves - 100,000 UGX</option>
+                        <option value="Hair Wash & Treatment">Hair Wash & Treatment - 40,000 UGX</option>
+                        <option value="Cornrows">Cornrows - 40,000 UGX</option>
+                        <option value="Hair Consultation">Hair Consultation - Free</option>
+                    </select>
+                </div>
+
+                <!-- Date & Time -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">📆 Date</label>
+                        <input type="date" id="date" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; box-sizing: border-box;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">⏰ Time</label>
+                        <input type="time" id="time" required style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; box-sizing: border-box;">
+                    </div>
+                </div>
+                <p style="font-size: 12px; color: var(--text-light); margin-bottom: 30px;">⏱️ We're open 9 AM - 6 PM weekdays</p>
+
+                <!-- Special Requests -->
+                <div style="margin-bottom: 30px;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: var(--text-dark);">✨ Special Requests (Optional)</label>
+                    <textarea id="notes" placeholder="e.g., hair length, color preference, length of appointment..." style="width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 15px; box-sizing: border-box; background: var(--white); font-family: inherit; resize: vertical; min-height: 100px;"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-rose" style="width: 100%; padding: 15px; font-size: 16px; font-weight: 600; border: none; cursor: pointer;">✓ Send Booking Request</button>
+                <p style="text-align: center; font-size: 12px; color: var(--text-light); margin-top: 15px;">You'll get a WhatsApp message to confirm</p>
+            </form>
+        </div>
+    </section>
+
+    <div class="description-bar">
+        <h2>Questions?</h2>
+        <p>Contact us via WhatsApp or call directly for instant support</p>
+        <a href="https://wa.me/256708425369" class="btn-rose" style="margin-top: 20px; display: inline-block;">
+            <i class="fab fa-whatsapp"></i> Message on WhatsApp
+        </a>
+    </div>
+</main>
+
+<footer>
+    <p>SP Plaza Level 2 Shop 12, William Street, Kampala | Call/WhatsApp: <a href="tel:0708425369">0708425369</a></p>
+    <p style="margin-top:15px;">
+        Follow us: 
+        <a href="https://www.instagram.com/sofarihairstudio?igsh=MTB6eWc3endqeXNsdg==" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@sofari.hair.studio?_r=1&_t=ZS-95yvasUpIJh" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 10px;">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+    </p>
+    <p style="margin-top:10px; font-size:11px;">&copy; 2024 Sofari Hair Studio. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/256708425369" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<script src="app.js"></script>
+<script>
+function handleBooking(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const service = document.getElementById('service').value;
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const notes = document.getElementById('notes').value;
+    
+    const message = `Hello! I'd like to book an appointment:\n\n📋 Name: ${name}\n📞 Phone: ${phone}\n💇 Service: ${service}\n📅 Date: ${date}\n⏰ Time: ${time}\n${notes ? '\n📝 Notes: ' + notes : ''}`;
+    
+    const whatsappUrl = `https://wa.me/256708425369?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofari Hair Studio | Premium Hair Salon</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            padding: 80px 8%;
+        }
+
+        .about-content h2 {
+            font-size: 42px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            padding: 60px 8%;
+            background: var(--bg-medium);
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            border: 1px solid var(--border);
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 160, 160, 0.2);
+        }
+
+        .feature-card i {
+            font-size: 40px;
+            color: var(--accent-hover);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .services-preview {
+            padding: 80px 8%;
+            background: var(--white);
+        }
+
+        .services-preview h2 {
+            font-size: 42px;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-item {
+            background: var(--bg-light);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid var(--border);
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(212, 160, 160, 0.2);
+        }
+
+        .service-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-item-content {
+            padding: 20px;
+        }
+
+        .service-item h3 {
+            font-size: 18px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            color: var(--accent-hover);
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-item .btn-rose {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 13px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #e8a0a0 0%, #f0b8b0 100%);
+            padding: 80px 8%;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .testimonials {
+            padding: 80px 8%;
+            background: var(--white);
+        }
+
+        .testimonials h2 {
+            font-size: 42px;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid var(--accent-hover);
+        }
+
+        .testimonial-card .stars {
+            color: var(--accent-hover);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .testimonial-card p {
+            color: var(--text-dark);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 14px;
+        }
+
+        .why-choose {
+            padding: 80px 8%;
+            background: var(--bg-medium);
+        }
+
+        .why-choose h2 {
+            font-size: 42px;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .why-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .why-item {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+            background: var(--white);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .why-item i {
+            font-size: 28px;
+            color: var(--accent-hover);
+            flex-shrink: 0;
+        }
+
+        .why-item h3 {
+            font-size: 16px;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .why-item p {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+                padding: 40px 5%;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-list {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content h2 {
+                font-size: 32px;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+
+            .services-preview h2 {
+                font-size: 32px;
+            }
+
+            .testimonials h2 {
+                font-size: 32px;
+            }
+
+            .why-choose h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">✨ Sofari Hair Studio</a>
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="booking.html" class="nav-book-btn">Book Now</a>
+    </nav>
+</header>
+
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero-split">
+        <div class="hero-content">
+            <span>Kampala • Est. 2020</span>
+            <h1>A quiet ritual of <em>hair artistry</em> and care.</h1>
+            <p>Sofari Hair Studio is a specialized salon at SP Plaza devoted to the beauty of Black hair—where every sew-weave and braid feels like an exhale.</p>
+            
+            <div class="hero-btns">
+                <a href="booking.html" class="btn-rose">Book Appointment</a>
+                <a href="services.html" class="btn-outline">View Services</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="img-container">
+                <img src="sofari-1.jpeg" alt="Hair Artistry">
+                <div class="badge">
+                    <strong>1K+</strong>
+                    <span>TikTok Fans</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TAGLINE -->
+    <section class="description-bar">
+        <h2>✨ Exclusively Hair. Exclusively You.</h2>
+        <p>Located at SP Plaza Level 2 Shop 12. We specialize in professional hair care, sew-weaves, knotless braids, and premium hair products.</p>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+        <div class="about-content">
+            <h2>About Sofari Hair Studio</h2>
+            <p>At Sofari, we believe that hair care is self-care. Since 2020, we've been dedicated to providing premium hair services that celebrate the natural beauty and unique texture of Black hair.</p>
+            <p>Our team of expert stylists combines years of experience with the latest techniques to ensure every client leaves feeling confident and beautiful.</p>
+            <p>We use only the highest quality products and materials to guarantee lasting results that keep your hair healthy and stunning.</p>
+            <a href="booking.html" class="btn-rose">Get Started Today</a>
+        </div>
+        <div class="about-content">
+            <img src="sofari-1.jpeg" alt="About Sofari" style="border-radius: 15px; width: 100%; box-shadow: 0 15px 40px rgba(212, 160, 160, 0.2);">
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-grid">
+        <div class="feature-card">
+            <i class="fas fa-award"></i>
+            <h3>Expert Stylists</h3>
+            <p>Our team consists of certified professionals with years of experience in hair artistry and care.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-leaf"></i>
+            <h3>Premium Products</h3>
+            <p>We use only the finest, natural hair care products to keep your hair healthy and vibrant.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fas fa-heart"></i>
+            <h3>Personalized Care</h3>
+            <p>Every client is unique, and we tailor our services to meet your specific hair needs and goals.</p>
+        </div>
+    </section>
+
+    <!-- FEATURED SERVICES -->
+    <section class="services-preview">
+        <h2>Our Featured Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <img src="sofari-2.jpeg" alt="Knotless Braids">
+                <div class="service-item-content">
+                    <h3>Knotless Braids</h3>
+                    <p style="color: var(--accent-hover); font-weight: 600; margin-bottom: 10px;">From 80,000 UGX</p>
+                    <p style="font-size: 14px; margin-bottom: 15px;">Lightweight, protective braids that reduce tension on your hairline. Perfect for natural hair health and stunning style.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="services.html" class="btn-rose" style="flex: 1; text-align: center; padding: 10px;">Learn More</a>
+                        <a href="booking.html" class="btn-rose" style="flex: 1; text-align: center; padding: 10px; background: var(--accent-hover);">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="sofari-3.jpeg" alt="Sew-in Weaves">
+                <div class="service-item-content">
+                    <h3>Sew-in Weaves</h3>
+                    <p style="color: var(--accent-hover); font-weight: 600; margin-bottom: 10px;">From 100,000 UGX</p>
+                    <p style="font-size: 14px; margin-bottom: 15px;">Premium sew-in installation with quality hair. Transform your look with professional, long-lasting weaves.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="services.html" class="btn-rose" style="flex: 1; text-align: center; padding: 10px;">Learn More</a>
+                        <a href="booking.html" class="btn-rose" style="flex: 1; text-align: center; padding: 10px; background: var(--accent-hover);">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="service-item">
+                <img src="sofari-10.jpeg" alt="Hair Wash & Treatment">
+                <div class="service-item-content">
+                    <h3>Hair Wash & Treatment</h3>
+                    <p style="color: var(--accent-hover); font-weight: 600; margin-bottom: 10px;">From 40,000 UGX</p>
+                    <p style="font-size: 14px; margin-bottom: 15px;">Deep moisture treatment that leaves your hair soft, shiny, and healthy. Essential maintenance for all hair types.</p>
+                    <div style="display: flex; gap: 10px;">
+                        <a href="services.html" class="btn-rose" style="flex: 1; text-align: center; padding: 10px;">Learn More</a>
+                        <a href="booking.html" class="btn-rose" style="flex: 1; text-align: center; padding: 10px; background: var(--accent-hover);">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center;">
+            <a href="services.html" class="btn-rose">View All Services</a>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="why-choose">
+        <h2>Why Choose Sofari?</h2>
+        <div class="why-list">
+            <div class="why-item">
+                <i class="fas fa-star"></i>
+                <div>
+                    <h3>Premium Quality</h3>
+                    <p>Highest quality products and professional expertise in every service.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                    <h3>Quick Booking</h3>
+                    <p>Easy online booking with WhatsApp confirmation for your convenience.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <i class="fas fa-users"></i>
+                <div>
+                    <h3>Expert Team</h3>
+                    <p>Certified stylists with years of experience in hair care and styling.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <i class="fas fa-location-dot"></i>
+                <div>
+                    <h3>Prime Location</h3>
+                    <p>Conveniently located at SP Plaza Level 2 for easy access.</p>
+                </div>
+            </div>
+            <div class="why-item">
+                <i class="fas fa-smile"></i>
+                <div>
+                    <h3>Customer Satisfaction</h3>
+                    <p>100% satisfaction guarantee with 1K+ happy followers on TikTok.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h2>Client Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"The best hair service I've ever had! The stylists are so professional and attentive. My braids look amazing!"</p>
+                <div class="testimonial-author">- Sarah K.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Sofari changed my life. They really understand how to care for Black hair. Highly recommended!"</p>
+                <div class="testimonial-author">- Jessica M.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Sofari's attention to detail is incredible! My hair transformation was stunning and exceeded my expectations."</p>
+                <div class="testimonial-author">- Angela T.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta-section">
+        <h2>Ready to Transform Your Hair?</h2>
+        <p>Book an appointment with our expert stylists today and experience the Sofari difference.</p>
+        <a href="booking.html" class="btn-rose" style="background: var(--white); color: var(--accent-hover);">Book Your Appointment Now</a>
+    </section>
+</main>
+
+<footer>
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; text-align: left;">
+            <!-- Location -->
+            <div>
+                <h3 style="color: var(--text-dark); margin-bottom: 15px; font-size: 16px;">📍 Location</h3>
+                <p style="margin: 0; line-height: 1.6;">
+                    SP Plaza Level 2 Shop 12<br>
+                    William Street<br>
+                    Kampala, Uganda
+                </p>
+            </div>
+            
+            <!-- Contact -->
+            <div>
+                <h3 style="color: var(--text-dark); margin-bottom: 15px; font-size: 16px;">📞 Contact Us</h3>
+                <p style="margin: 0; line-height: 1.8;">
+                    <a href="tel:0708425369" style="color: var(--accent-hover); text-decoration: none;">Call: 0708425369</a><br>
+                    <a href="https://wa.me/256708425369" target="_blank" style="color: var(--accent-hover); text-decoration: none;">WhatsApp: Message Us</a>
+                </p>
+            </div>
+            
+            <!-- Hours -->
+            <div>
+                <h3 style="color: var(--text-dark); margin-bottom: 15px; font-size: 16px;">🕐 Hours</h3>
+                <p style="margin: 0; line-height: 1.6;">
+                    Mon - Fri: 9:00 AM - 6:00 PM<br>
+                    Sat: 10:00 AM - 5:00 PM<br>
+                    Sun: Closed
+                </p>
+            </div>
+
+            <!-- Follow Us -->
+            <div>
+                <h3 style="color: var(--text-dark); margin-bottom: 15px; font-size: 16px;">📱 Follow Us</h3>
+                <p style="margin: 0; line-height: 1.8;">
+                    <a href="https://www.instagram.com/sofarihairstudio?igsh=MTB6eWc3endqeXNsdg==" target="_blank" style="color: var(--accent-hover); text-decoration: none;"><i class="fab fa-instagram"></i> Instagram</a><br>
+                    <a href="https://www.tiktok.com/@sofari.hair.studio?_r=1&_t=ZS-95yvasUpIJh" target="_blank" style="color: var(--accent-hover); text-decoration: none;"><i class="fab fa-tiktok"></i> TikTok</a>
+                </p>
+            </div>
+        </div>
+        
+        <div style="border-top: 1px solid var(--border); padding-top: 20px; text-align: center;">
+            <p style="margin: 0; font-size: 11px;">&copy; 2024 Sofari Hair Studio. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/256708425369" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>

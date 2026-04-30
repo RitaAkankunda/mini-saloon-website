@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Site Map | Sofari Hair Studio</title>
+    <style>
+        .sitemap-container {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 40px;
+        }
+
+        .sitemap-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .sitemap-section:hover {
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
+        }
+
+        .sitemap-section h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sitemap-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sitemap-section li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .sitemap-section li:last-child {
+            border-bottom: none;
+        }
+
+        .sitemap-section a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sitemap-section a:hover {
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo">✨ Sofari Hair Studio</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="sitemap.html" class="active">Site Map</a>
+        <a href="booking.html" class="nav-book-btn">Book Now</a>
+    </nav>
+</header>
+
+<main>
+    <div class="description-bar">
+        <h2>🗺️ Website Structure</h2>
+        <p>Navigate through our site and discover all we have to offer</p>
+    </div>
+
+    <div class="sitemap-container">
+        <div class="sitemap-section">
+            <h3><i class="fas fa-home"></i> Main Pages</h3>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-arrow-right"></i> Home - Welcome & Featured Intro</a></li>
+                <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services - Professional Hair Services</a></li>
+                <li><a href="gallery.html"><i class="fas fa-arrow-right"></i> Gallery - Hair Transformation Photos</a></li>
+                <li><a href="booking.html"><i class="fas fa-arrow-right"></i> Book Now - Schedule Appointment</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-section">
+            <h3><i class="fas fa-scissors"></i> Services</h3>
+            <ul>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-check-circle"></i> Knotless Braids - 80,000 UGX</span></li>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-check-circle"></i> Sew-in Weaves - 100,000 UGX</span></li>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-check-circle"></i> Hair Steaming - 40,000 UGX</span></li>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-check-circle"></i> Cornrows - 50,000 UGX</span></li>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-check-circle"></i> Hair Coloring - 60,000 UGX</span></li>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-check-circle"></i> Hair Consultation - Free</span></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-section">
+            <h3><i class="fas fa-headset"></i> Contact & Support</h3>
+            <ul>
+                <li><a href="tel:0708425369"><i class="fas fa-phone"></i> Call: 0708425369</a></li>
+                <li><a href="https://wa.me/256708425369" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp: Message Us</a></li>
+                <li><a href="booking.html"><i class="fas fa-calendar"></i> Book an Appointment</a></li>
+            </ul>
+        </div>
+
+        <div class="sitemap-section">
+            <h3><i class="fas fa-map-marker-alt"></i> Visit Us</h3>
+            <ul>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-building"></i> SP Plaza Level 2, Shop 12</span></li>
+                <li><span style="color: var(--text-light); display: flex; gap: 8px;"><i class="fas fa-road"></i> William Street, Kampala</span></li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>SP Plaza Level 2 Shop 12, William Street, Kampala | Call/WhatsApp: <a href="tel:0708425369">0708425369</a></p>
+    <p style="margin-top:15px;">
+        Follow us: 
+        <a href="https://www.instagram.com/sofarihairstudio?igsh=MTB6eWc3endqeXNsdg==" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 10px;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+        <a href="https://www.tiktok.com/@sofari.hair.studio?_r=1&_t=ZS-95yvasUpIJh" target="_blank" style="color: var(--accent); text-decoration: none; margin: 0 10px;">
+            <i class="fab fa-tiktok"></i> TikTok
+        </a>
+    </p>
+    <p style="margin-top:10px; font-size:11px;">&copy; 2024 Sofari Hair Studio. All rights reserved.</p>
+</footer>
+
+<a href="https://wa.me/256708425369" class="whatsapp-btn">
+    <i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
